@@ -1,0 +1,499 @@
+@import url("https://fonts.googleapis.com/css2?family=Itim&family=Montserrat&family=Noto+Color+Emoji&display=swap");
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: auto;
+}
+
+.aberturaOpen::after {
+    content: "";
+    background: linear-gradient(to top, #d4a174, #e6dab4);
+    opacity: 1;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    position: absolute;
+    z-index: -2;
+}
+
+.aberturaOpen {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../../image/capaJobCalc3-Photoroom.png-Photoroom.png');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    position: relative;
+}
+
+.aberturaClosed {
+    display: none;
+}
+
+.tituloOpen {
+    display: flex;
+    justify-content: center;
+    background-color: black;
+    text-align: center;
+    width: 29%;
+    height: 11%;
+    position: absolute;
+    top: 15%;
+    left: 35.3%;
+    border-radius: 10px;
+}
+
+.neonOff {
+    display: none;
+}
+
+.neon {
+    border: 8px solid #14fff1;
+    border-radius: 10px;
+    font-family: "Itim", cursive;
+    height: 95%;
+    display: inline-block;
+    font-size: 2em;
+    padding: 8px;
+    margin-top: 5px;
+    color: #14fff1;
+    text-shadow: 0 0 8px rgba(255, 255, 255, 0.3), 0 0 29px #14fff1;
+    box-shadow: inset 0 0 32px #14fff1, 0 0 32px #14fff1;
+    position: relative;
+    animation: flash 500ms;
+}
+
+@keyframes flash {
+
+    0%,
+    100% {
+        opacity: 0;
+    }
+
+    50% {
+        opacity: 1;
+    }
+}
+
+.capaBotaoOnOff {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 20px);
+}
+
+.buttonOnOff {
+    width: 50px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.buttonOnOff a {
+    color: red;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #808080;
+    display: block;
+    position: relative;
+    padding: 6px 8px;
+    text-shadow: 0px 1px 0px #000;
+    box-shadow: inset 0 1px 0 #D3D3D3, 0 10px 0 #696969;
+    border-radius: 5px;
+}
+
+.buttonOnOff a:active {
+    top: 10px;
+    background-color: #696969;
+    box-shadow: inset 0 1px 0 #D3D3D3, inset 0 -3px 0 #696969;
+}
+
+.buttonOnOff::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    border-radius: 5px;
+}
+
+.capaBotao {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, 80px);
+}
+
+.job {
+    width: 150px;
+    position: relative;
+    display: inline-block;
+    margin: 20px;
+}
+
+.job a {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 17px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #FFA12B;
+    display: block;
+    position: relative;
+    padding: 15px 8px;
+    text-shadow: 0px 1px 0px #000;
+    box-shadow: inset 0 1px 0 #FFE5C4, 0 10px 0 #915100;
+    border-radius: 5px;
+}
+
+.job a:active {
+    top: 10px;
+    background-color: #F78900;
+    box-shadow: inset 0 1px 0 #FFE5C4, inset 0 -3px 0 #915100;
+}
+
+.job::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    border-radius: 5px;
+}
+
+.dadosClosed {
+    display: none;
+}
+
+.dadosOpen {
+    display: flex;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 100%;
+    min-height: 100vh;
+    padding: 20px;
+    align-items: center;
+}
+
+.titulo {
+    width: 100%;
+    max-width: 1200px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.help {
+    font-size: 1.2em;
+    cursor: pointer;
+}
+
+.help:hover {
+    color: red;
+}
+
+form {
+    width: 100%;
+    max-width: 1200px;
+    border-radius: 5px;
+    display: flex;
+    flex-direction: column;
+    box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
+    padding: 15px;
+    background: white;
+}
+
+label {
+    margin-left: 10px;
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.locais {
+    margin-top: 10px;
+}
+
+.locais label {
+    margin-left: 5px;
+    font-weight: normal;
+}
+
+#entradaData {
+    width: 150px;
+    padding: 8px;
+    margin: 5px 0 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px grey;
+}
+
+.locais input[type="radio"] {
+    margin-left: 10px;
+}
+
+#horaInicio,
+#horaFim {
+    width: 150px;
+    padding: 8px;
+    margin: 5px 0 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px grey;
+}
+
+.botaoTresDe {
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.button {
+    width: 100px;
+    position: relative;
+    display: inline-block;
+}
+
+.button a {
+    color: white;
+    font-family: Helvetica, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-align: center;
+    text-decoration: none;
+    background-color: #808080;
+    display: block;
+    position: relative;
+    padding: 10px 8px;
+    text-shadow: 0px 1px 0px #000;
+    box-shadow: inset 0 1px 0 #D3D3D3, 0 10px 0 #696969;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.button a:active {
+    top: 10px;
+    background-color: #696969;
+    box-shadow: inset 0 1px 0 #D3D3D3, inset 0 -3px 0 #696969;
+}
+
+.button::after {
+    content: "";
+    height: 100%;
+    width: 100%;
+    padding: 4px;
+    position: absolute;
+    bottom: -15px;
+    left: -4px;
+    z-index: -1;
+    background-color: #2B1800;
+    border-radius: 5px;
+}
+
+.busca {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
+    background: white;
+}
+
+#input-busca {
+    width: 100%;
+    max-width: 300px;
+    padding: 8px;
+    margin: 5px 0 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    box-shadow: 2px 2px 3px grey;
+}
+
+.content {
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
+    background: white;
+}
+
+#tituloRelatorio,
+#name,
+#monthYear {
+    text-align: center;
+    margin: 10px 0;
+}
+
+.oculto {
+    display: none;
+}
+
+.tituloVisivel {
+    display: block;
+}
+
+#cabecalhoRelat {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+#tabela {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+#tabela th,
+#tabela td {
+    border: 1px solid #ccc;
+    padding: 8px;
+    text-align: center;
+}
+
+#tabela th {
+    background-color: #f0f0f0;
+    font-weight: bold;
+}
+
+#tabela th:first-child,
+#tabela td:first-child {
+    width: 50px;
+}
+
+#total {
+    margin-top: 15px;
+}
+
+#campoTotalHoras {
+    padding: 15px;
+    border-radius: 5px;
+    background-color: #D3D3D3;
+    border: none;
+}
+
+#campoTotalHoras legend {
+    font-weight: bold;
+}
+
+#calcTotalHoras {
+    font-size: 1.4em;
+    text-shadow: 2px 2px 2px white;
+}
+
+.comandos {
+    width: 100%;
+    max-width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 3px 3px 5px grey, -3px -3px 5px grey;
+    background: white;
+    flex-wrap: wrap;
+}
+
+.comandos button {
+    width: 40px;
+    height: 40px;
+    cursor: pointer;
+    background-color: grey;
+    border: none;
+    border-radius: 5px;
+    color: white;
+    transition: all 0.3s;
+    font-size: 16px;
+}
+
+.comandos button:hover {
+    background-color: #696969;
+}
+
+#btnDeletarLinha:hover {
+    background-color: #696969;
+    color: red;
+}
+
+#btnDeletarLinha.pulsar {
+    animation: pulse 1s infinite;
+    background-color: red !important;
+    color: white !important;
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        background-color: red;
+    }
+
+    50% {
+        background-color: #cc9494;
+    }
+}
+
+#encerrar:hover {
+    background-color: red;
+}
+
+.linha-selecionada {
+    background-color: lime;
+    font-weight: bold;
+}
+
+@media only screen and (max-width: 768px) {
+    .tituloOpen {
+        width: 90%;
+        height: 100px;
+    }
+
+    .neon {
+        font-size: 1.5em;
+    }
+
+    form,
+    .busca,
+    .content,
+    .comandos {
+        max-width: 100%;
+    }
+
+    #tabela {
+        font-size: 0.85em;
+    }
+
+    .locais label {
+        font-size: 0.9em;
+    }
+}
